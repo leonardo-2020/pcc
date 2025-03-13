@@ -1,0 +1,92 @@
+<?php
+include_once "conexao.php";
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de usuários</title>
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body>
+    
+    <form class="form">
+        <div class="card">
+            <div class="card-top">
+                <img src="../imagem/usuario.png" class="img-login">
+                <h2 class="título">Painel de controle</h2>
+                <p>Fazendo seu cadastro</p>
+            </div>
+
+            <div class="card-group">
+                <label for="">Nome completo: </label><br>
+                <input type="text" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="card-group">
+                <label for="">E-mail: </label><br>
+                <input type="email" name="email" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="card-group">
+                <label for="">Criar senha: </label><br>
+                <input type="password" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="card-group">
+                <label for="">Confirma senha: </label><br>
+                <input type="password" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="card-group">
+                <label for="">Número de telefone: </label><br>
+                <input type="number" name="número" placeholder="Digite o número" required>
+            </div>
+
+            <div class="Lembre-me">
+                <label for=""><input type="checkbox">Lembre-me</label>
+            </div>
+
+            <div class="card-group btn">
+                <button type="submit" name="SendCardUsuario">CADASTRAR</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
+<!--<?php 
+        $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+        if(!empty($dados['SendCadUsuario'])){
+
+        try{
+            $query_usuarios = "INSERT INTO usuarios (nome, email, senha, sits_usuario_id, niveis_acesso_id, created) VALUES (:nome, :email, :senha, :sits_usuario_id, :niveis_acesso_id, NOW())";
+        $cad_usuario = $conn->prepare($query_usuarios);
+        $cad_usuario->bindParam(':nome',$dados['nome'],PDO::PARAM_STR);
+        $cad_usuario->bindParam(':email',$dados['email'],PDO::PARAM_STR);
+        $cad_usuario->bindParam(':senha',$dados['senha'],PDO::PARAM_STR);
+        $cad_usuario->bindParam(':sits_usuario_id',$dados['sits_usuario_id'],PDO::PARAM_INT);
+        $cad_usuario->bindParam(':niveis_acesso-id',$dados['niveis_acesso_id'],PDO::PARAM_INT);
+
+        $cad_usuario->execute();
+
+        if($cad_usuario->rowCount()){
+                echo "Usuário cadastrado com sucesso!!!";
+                unset($dados);
+        }else{
+            echo "Erro: usuário não cadastrado!!". $erro->getMessage(). "<br><br>";
+        }
+        }catch (PDOException $erro){
+            echo "Erro: usuário não cadastrado!!". $erro->getMessage(). "<br><br>";
+        }
+}
+
+        
+    ?>-->

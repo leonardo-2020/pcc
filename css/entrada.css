@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(34, 33, 33);
+    font-family: sans-serif;
+}
+
+.card{
+    background-color: whitesmoke;
+    box-shadow: 1px+1px+5px #ccc;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.form{
+    width: 400px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.card-top{
+    text-align: center;
+}
+
+.card-1 ul {
+    display: inline-block;
+    margin-right: 16px;
+    height: 50px;
+}
+
+.card-1 ul a {
+    color: #8b8b8b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
