@@ -40,11 +40,6 @@ include_once "conexao.php";
             </div>
 
             <div class="card-group">
-                <label for="">Confirma senha: </label><br>
-                <input type="password" name="senha" placeholder="Digite sua senha" required>
-            </div>
-
-            <div class="card-group">
                 <label for="">Número de telefone: </label><br>
                 <input type="number" name="número" placeholder="Digite o número" required>
             </div>
@@ -61,32 +56,3 @@ include_once "conexao.php";
 </body>
 
 </html>
-<!--<?php 
-        $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-        if(!empty($dados['SendCadUsuario'])){
-
-        try{
-            $query_usuarios = "INSERT INTO usuarios (nome, email, senha, sits_usuario_id, niveis_acesso_id, created) VALUES (:nome, :email, :senha, :sits_usuario_id, :niveis_acesso_id, NOW())";
-        $cad_usuario = $conn->prepare($query_usuarios);
-        $cad_usuario->bindParam(':nome',$dados['nome'],PDO::PARAM_STR);
-        $cad_usuario->bindParam(':email',$dados['email'],PDO::PARAM_STR);
-        $cad_usuario->bindParam(':senha',$dados['senha'],PDO::PARAM_STR);
-        $cad_usuario->bindParam(':sits_usuario_id',$dados['sits_usuario_id'],PDO::PARAM_INT);
-        $cad_usuario->bindParam(':niveis_acesso-id',$dados['niveis_acesso_id'],PDO::PARAM_INT);
-
-        $cad_usuario->execute();
-
-        if($cad_usuario->rowCount()){
-                echo "Usuário cadastrado com sucesso!!!";
-                unset($dados);
-        }else{
-            echo "Erro: usuário não cadastrado!!". $erro->getMessage(). "<br><br>";
-        }
-        }catch (PDOException $erro){
-            echo "Erro: usuário não cadastrado!!". $erro->getMessage(). "<br><br>";
-        }
-}
-
-        
-    ?>-->
