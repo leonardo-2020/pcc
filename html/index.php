@@ -11,7 +11,7 @@
         <div class="card">
             <div class="card-top">
                 <h2 class="título">Bem vindo</h2>
-                <p>Faça o cadastro ou o login</p>
+                <p>Faça os cadastro ou o login</p>
             </div>
 
             <div class="card-1">
